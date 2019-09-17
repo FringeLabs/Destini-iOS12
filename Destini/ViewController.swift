@@ -35,7 +35,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var storyTextView: UILabel!
     
     // TODO Step 5: Initialise instance variables here
-    
+    var currentStory : Int = 1
     
     
     
@@ -44,7 +44,7 @@ class ViewController: UIViewController {
         
         
         // TODO Step 3: Set the text for the storyTextView, topButton, bottomButton, and to T1_Story, T1_Ans1, and T1_Ans2
-        
+        loadStory(storyIndex: 1)
     }
 
     
@@ -52,14 +52,65 @@ class ViewController: UIViewController {
     @IBAction func buttonPressed(_ sender: UIButton) {
     
         // TODO Step 4: Write an IF-Statement to update the views
+        if (currentStory == 1 && sender.tag == 1) {
+            loadStory(storyIndex: 3)
+        } else if (currentStory == 1 && sender.tag == 2) {
+            loadStory(storyIndex: 2)
+        }
                 
         // TODO Step 6: Modify the IF-Statement to complete the story
+        else if (currentStory == 3 && sender.tag == 1) {
+            loadStory(storyIndex: 6)
+        }
         
+        else if (currentStory == 3 && sender.tag == 2) {
+            loadStory(storyIndex: 5)
+        }
+        
+        else if (currentStory == 2 && sender.tag == 1) {
+            loadStory(storyIndex: 3)
+        }
+            
+        else if (currentStory == 2 && sender.tag == 2) {
+            loadStory(storyIndex: 4)
+        }
     
     }
     
+    func loadStory(storyIndex: Int) {
+        currentStory = storyIndex
+        
+        if (storyIndex == 1) {
+            refreshUI(story: story1, option1: answer1a, option2: answer1b)
+        } else if (storyIndex == 2) {
+            refreshUI(story: story2, option1: answer2a, option2: answer2b)
+        } else if (storyIndex == 3) {
+            refreshUI(story: story3, option1: answer3a, option2: answer3b)
+        } else if (storyIndex == 6) {
+            finishStory(story: story6)
+        } else if (storyIndex == 5) {
+            finishStory(story: story5)
+        } else if (storyIndex == 4) {
+            finishStory(story: story4)
+        }
+        
+    }
 
+    func refreshUI(story: String, option1: String, option2: String) {
+        
+        storyTextView.text = story
+        topButton.setTitle(option1, for: .normal)
+        bottomButton.setTitle(option2, for: .normal)
+        
+    }
+    
+    func finishStory(story: String) {
+        
+        storyTextView.text = story
+        topButton.isHidden = true
+        bottomButton.isHidden = true
 
+    }
 
 }
 

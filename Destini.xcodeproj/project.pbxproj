@@ -107,6 +107,7 @@
 				TargetAttributes = {
 					EBB1C73A1B9633A60011F5C3 = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = 97358PRCYF;
 						LastSwiftMigration = 1020;
 					};
 				};
@@ -284,10 +285,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 97358PRCYF;
 				INFOPLIST_FILE = Destini/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.YourName.Destini;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fringelabs.Destini;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -297,10 +299,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 97358PRCYF;
 				INFOPLIST_FILE = Destini/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.YourName.Destini;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fringelabs.Destini;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
